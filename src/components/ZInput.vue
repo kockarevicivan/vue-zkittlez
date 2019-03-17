@@ -23,7 +23,7 @@ export default {
 .form-item {
 	display: block;
 	width: 100%;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .border {
@@ -31,16 +31,20 @@ export default {
 }
 
 input {
-	height: 40px;
+	height: 44px;
 	width: 100%;
 	border: none;
 	outline: none!important;
 	color: #222;
-	padding: 0 20px;
+	padding: 0 15px;
+	font-size: 13px;
 }
 
 label {
 	display: inline-block;
 	text-align: left;
+	font-size: 13px;
+	height: 15px;
+	margin: 0 0 5px 2px;
 }
 </style>
