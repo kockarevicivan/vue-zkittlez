@@ -3,7 +3,7 @@
 		<ZCenter>
 			<ZThird>
 				<ZCard>
-					<form>
+					<div>
 						<h1>Test form</h1>
 
 						<ZInput id="fullName" placeholder="Full name" label="Full name" />
@@ -11,8 +11,8 @@
 						<ZInput id="address" placeholder="Address" label="Address" />
 						<ZTextarea id="message" placeholder="Message" label="Message" />
 
-						<ZButton text="Click me" />
-					</form>
+						<ZButton @onClick="buttonClick" text="Click me" />
+					</div>
 				</ZCard>
 			</ZThird>
 		</ZCenter>
@@ -36,6 +36,11 @@ export default {
 		ZTextarea,
 		ZButton,
 		ZCard
+	},
+	methods: {
+		buttonClick() {
+			alert('Button clicked!');
+		}
 	}
 }
 </script>

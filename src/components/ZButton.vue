@@ -1,5 +1,5 @@
 <template>
-	<button :style="computedStyle">{{text}}</button>
+	<button :style="computedStyle" v-on:click="$emit('onClick')">{{text}}</button>
 </template>
 
 <script>
