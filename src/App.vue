@@ -6,12 +6,12 @@
 					<div>
 						<h1>Test form</h1>
 
-						<ZInput id="fullName" placeholder="Full name" label="Full name" />
+						<ZInput id="fullName" @keyup="onFullName" placeholder="Full name" label="Full name" />
 						<ZInput id="email" placeholder="E-mail" label="E-mail" />
 						<ZInput id="address" placeholder="Address" label="Address" />
 						<ZTextarea id="message" placeholder="Message" label="Message" />
 
-						<ZButton @onClick="buttonClick" text="Click me" />
+						<ZButton @click="buttonClick" text="Click me" />
 					</div>
 				</ZCard>
 			</ZThird>
@@ -38,6 +38,9 @@ export default {
 		ZCard
 	},
 	methods: {
+		onFullName(value) {
+			alert(value);
+		},
 		buttonClick() {
 			alert('Button clicked!');
 		}

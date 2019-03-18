@@ -2,7 +2,7 @@
 	<div class="form-item" :style="computedStyleItem">
 		<label :style="computedStyleLabel" :for="id">{{label}}</label>
 		<div :style="computedStyleBorder">
-			<textarea :style="computedStyleTextarea" :id="id" :placeholder="placeholder"></textarea>
+			<textarea v-on:keyup="$emit('keyup', $refs.textareaElement.value)" ref="textareaElement" :style="computedStyleTextarea" :id="id" :placeholder="placeholder"></textarea>
 		</div>
 	</div>
 </template>
