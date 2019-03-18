@@ -11,6 +11,8 @@
 						<ZInput id="address" placeholder="Address" label="Address" />
 						<ZTextarea id="message" placeholder="Message" label="Message" />
 
+						<ZCheckbox />
+
 						<ZButton @click="buttonClick" text="Click me" />
 					</div>
 				</ZCard>
@@ -26,6 +28,7 @@ import ZInput from './components/ZInput.vue';
 import ZTextarea from './components/ZTextarea.vue';
 import ZButton from './components/ZButton.vue';
 import ZCard from './components/ZCard.vue';
+import ZCheckbox from './components/ZCheckbox.vue';
 
 export default {
 	name: 'app',
@@ -35,7 +38,8 @@ export default {
 		ZInput,
 		ZTextarea,
 		ZButton,
-		ZCard
+		ZCard,
+		ZCheckbox
 	},
 	methods: {
 		onFullName(value) {
