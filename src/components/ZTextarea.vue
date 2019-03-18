@@ -1,13 +1,15 @@
 <template>
-	<div class="form-item">
-		<label :for="id">{{label}}</label>
-		<div class="border">
-			<textarea :id="id" :placeholder="placeholder"></textarea>
+	<div class="form-item" :style="computedStyleItem">
+		<label :style="computedStyleLabel" :for="id">{{label}}</label>
+		<div :style="computedStyleBorder">
+			<textarea :style="computedStyleTextarea" :id="id" :placeholder="placeholder"></textarea>
 		</div>
 	</div>
 </template>
 
 <script>
+import {config} from '../config';
+
 export default {
 	name: 'ZTextarea',
 	props: {
@@ -15,7 +17,38 @@ export default {
 		placeholder: String,
 		label: String
 	},
-	methods: {}
+	methods: {
+
+	},
+	computed: {
+		computedStyleItem() {
+            return `				
+				margin-bottom: ${config.styles.margin.small}px;
+            `;
+		},
+		computedStyleBorder() {
+            return `
+				border: 1px solid ${config.styles.color.inputBorder};
+				border-radius: ${config.styles.borderRadius.small}px;
+            `;
+        },
+        computedStyleLabel() {
+            return `
+				font-size: ${config.styles.font.size.label}px;
+				height: ${config.styles.font.size.label + 2}px;
+            `;
+		},
+        computedStyleTextarea() {
+			return `
+				color: ${config.styles.color.text};
+				min-height: 100px;
+				max-height: 300px;
+				padding: ${config.styles.padding.small}px;
+				font-size: ${config.styles.font.size.input}px;
+				line-height: ${config.styles.font.size.input + 7}px;
+            `;
+        }
+    }
 }
 </script>
 
@@ -23,30 +56,17 @@ export default {
 .form-item {
 	display: block;
 	width: 100%;
-	margin-bottom: 10px;
-}
-
-.border {
-	border: 1px solid #CCC;
 }
 
 textarea {
-	min-height: 100px;
-	max-height: 300px;
 	width: 100%!important;
 	border: none;
 	outline: none!important;
-	color: #222;
-	padding: 15px;
-	font-size: 13px;
-	line-height: 20px;
 }
 
 label {
 	display: inline-block;
 	text-align: left;
-	font-size: 13px;
-	height: 15px;
 	margin: 0 0 5px 2px;
 }
 </style>

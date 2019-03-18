@@ -1,12 +1,25 @@
 <template>
-	<div class="card">
+	<div class="card" :style="computedStyle" >
         <slot></slot>
     </div>
 </template>
 
 <script>
+import {config} from '../config';
+
 export default {
-	name: 'ZCard'
+    name: 'ZCard',
+    computed: {
+        computedStyle() {
+            return `
+                border-radius: ${config.styles.borderRadius.big}px;
+                padding: ${config.styles.padding.big}px;
+                -webkit-box-shadow: ${config.styles.boxShaddow.big};
+                -moz-box-shadow: ${config.styles.boxShaddow.big};
+                box-shadow: ${config.styles.boxShaddow.big};
+            `;
+        }
+    }
 }
 </script>
 
@@ -14,9 +27,5 @@ export default {
 .card {
     display: block;
     width: 100%;
-    padding: 20px;
-    -webkit-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2);
-    box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2);
 }
 </style>

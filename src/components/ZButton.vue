@@ -1,13 +1,27 @@
 <template>
-	<button>{{text}}</button>
+	<button :style="computedStyle">{{text}}</button>
 </template>
 
 <script>
+import {config} from '../config';
+
 export default {
 	name: 'ZButton',
 	props: {
 		text: String
-	}
+	},
+	computed: {
+        computedStyle() {
+            return `
+				border-radius: ${config.styles.borderRadius.small}px;
+				padding: 0 ${config.styles.padding.small}px;
+				height: ${config.styles.height.inputsAndButtons}px;
+				background-color: ${config.styles.color.primary};
+				color: ${config.styles.color.textInverted};
+				margin-bottom: ${config.styles.margin.medium}px;
+            `;
+        }
+    }
 }
 </script>
 
@@ -15,12 +29,8 @@ export default {
 button {
 	display: block;
 	width: 100%;
-	height: 44px;
+	outline: none!important;
 	border: none;
-	background-color: #FEC83C;
-	color: #FFF;
-	padding: 0 15px;
-	margin-bottom: 20px;
 	cursor: pointer;
 	font-weight: 600;
 }
