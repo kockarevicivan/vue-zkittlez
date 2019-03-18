@@ -2,7 +2,7 @@
 	<div class="form-item" :style="computedStyleItem">
 		<label :style="computedStyleLabel" :for="id">{{label}}</label>
 		<div :style="computedStyleBorder">
-			<input :id="id" :placeholder="placeholder" :style="computedStyleInput" />
+			<input v-on:keyup="$emit('keyup', $refs.inputElement.value)" ref="inputElement" :id="id" :placeholder="placeholder" :style="computedStyleInput" />
 		</div>
 	</div>
 </template>
@@ -16,9 +16,6 @@ export default {
 		id: String,
 		placeholder: String,
 		label: String
-	},
-	methods: {
-
 	},
 	computed: {
 		computedStyleItem() {
