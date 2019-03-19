@@ -1,3 +1,5 @@
+![alt text](https://github.com/kockarevicivan/vue-zkittlez/blob/master/src/assets/images/logo.png?raw=true)
+
 # vue-zkittlez
 
 VueJS wrapper for the Zkittlez UI theme/kit.
