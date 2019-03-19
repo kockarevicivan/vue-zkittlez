@@ -2,7 +2,7 @@
 	<div id="app">
 		<ZHeader />
 		<ZCenter vertical horizontal>
-			<ZQuarter>
+			<ZHalf>
 				<ZCard>
 					<div>
 						<h1>Test form</h1>
@@ -12,21 +12,30 @@
 						<ZInput id="address" placeholder="Address" label="Address" />
 						<ZTextarea id="message" placeholder="Message" label="Message" />
 
-						<ZCheckbox />
+						<ZSpacer line />
 
-						<ZWorld />
+						<ZCheckbox label="I agree to Zkittlez's terms and conditions." />
+
+						<ZCenter horizontal>
+							<ZHalf>
+								<ZWorld />
+							</ZHalf>
+						</ZCenter>
+
+						<ZSpacer />
 
 						<ZButton @click="buttonClick" text="Click me" />
 					</div>
 				</ZCard>
-			</ZQuarter>
+			</ZHalf>
 		</ZCenter>
 	</div>
 </template>
 
 <script>
 import ZCenter from './components/layout/ZCenter.vue';
-import ZQuarter from './components/layout/ZQuarter.vue';
+import ZHalf from './components/layout/ZHalf.vue';
+import ZSpacer from './components/ZSpacer.vue';
 import ZInput from './components/ZInput.vue';
 import ZTextarea from './components/ZTextarea.vue';
 import ZButton from './components/ZButton.vue';
@@ -39,7 +48,8 @@ export default {
 	name: 'app',
 	components: {
 		ZCenter,
-		ZQuarter,
+		ZHalf,
+		ZSpacer,
 		ZInput,
 		ZTextarea,
 		ZButton,
@@ -74,6 +84,6 @@ h1 {
 }
 
 #app {
-	height: 1100px;
+	height: 800px;
 }
 </style>

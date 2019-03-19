@@ -1,7 +1,10 @@
 <template>
 	<div class="form-item">
-        <input type="checkbox" id="checkbox" style="display:none"/>
-        <label for="checkbox" class="toggle"><span></span></label>    
+		<div class="inline-wrap">
+			<input type="checkbox" id="checkbox" style="display:none"/>
+			<label for="checkbox" class="toggle"><span></span></label>
+		</div>
+		<label v-if="label" class="actual-label" >{{label}}</label> 
     </div>
 </template>
 
@@ -20,6 +23,17 @@ export default {
     display: block;
     width: 100%;
 	margin-bottom: 15px;
+}
+
+.inline-wrap {
+	display: inline-block;
+}
+
+.actual-label {
+	font-size: 13px;
+	vertical-align: top;
+	line-height: 20px;
+	margin-left: 5px;
 }
 
 .toggle {
