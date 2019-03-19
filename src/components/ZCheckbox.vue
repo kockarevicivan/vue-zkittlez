@@ -19,6 +19,7 @@ export default {
 .form-item {
     display: block;
     width: 100%;
+	margin-bottom: 15px;
 }
 
 .toggle {

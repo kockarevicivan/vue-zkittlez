@@ -1,7 +1,8 @@
 <template>
 	<div id="app">
+		<ZHeader />
 		<ZCenter vertical horizontal>
-			<ZThird>
+			<ZQuarter>
 				<ZCard>
 					<div>
 						<h1>Test form</h1>
@@ -12,37 +13,40 @@
 						<ZTextarea id="message" placeholder="Message" label="Message" />
 
 						<ZCheckbox />
-						<!-- <ZWorld /> -->
+
+						<ZWorld />
 
 						<ZButton @click="buttonClick" text="Click me" />
 					</div>
 				</ZCard>
-			</ZThird>
+			</ZQuarter>
 		</ZCenter>
 	</div>
 </template>
 
 <script>
 import ZCenter from './components/layout/ZCenter.vue';
-import ZThird from './components/layout/ZThird.vue';
+import ZQuarter from './components/layout/ZQuarter.vue';
 import ZInput from './components/ZInput.vue';
 import ZTextarea from './components/ZTextarea.vue';
 import ZButton from './components/ZButton.vue';
 import ZCard from './components/ZCard.vue';
 import ZCheckbox from './components/ZCheckbox.vue';
-// import ZWorld from './components/illustrations/ZWorld.vue';
+import ZHeader from './components/ZHeader.vue';
+import ZWorld from './components/illustrations/ZWorld.vue';
 
 export default {
 	name: 'app',
 	components: {
 		ZCenter,
-		ZThird,
+		ZQuarter,
 		ZInput,
 		ZTextarea,
 		ZButton,
 		ZCard,
 		ZCheckbox,
-		// ZWorld
+		ZHeader,
+		ZWorld
 	},
 	methods: {
 		onFullName(value) {
@@ -70,6 +74,6 @@ h1 {
 }
 
 #app {
-	height: 1000px;
+	height: 1100px;
 }
 </style>

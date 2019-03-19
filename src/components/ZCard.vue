@@ -27,5 +27,6 @@ export default {
 .card {
     display: block;
     width: 100%;
+    background: #fcfcfc;
 }
 </style>
