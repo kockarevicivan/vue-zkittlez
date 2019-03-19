@@ -1,5 +1,7 @@
 # vue-zkittlez
 
+VueJS wrapper for the Zkittlez UI theme/kit.
+
 ## Project setup
 ```
 npm install
