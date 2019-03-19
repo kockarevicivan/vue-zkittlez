@@ -1,6 +1,6 @@
 <template>
 	<div>
-        <img src="https://timedotcom.files.wordpress.com/2017/08/slack_mark_web-copy.png" />
+        <img src="../assets/images/logo.png" />
         <a href="#">Welcome to Zkittlez!</a>
     </div>
 </template>
@@ -22,7 +22,7 @@ div {
 
 img {
     display: inline-block;
-    height: 30px;
+    height: 20px;
     padding-left: 40px;
 }
 

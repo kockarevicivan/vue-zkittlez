@@ -1,7 +1,7 @@
 <template>
 	<div class="form-item" :style="computedStyleItem">
 		<label :style="computedStyleLabel" :for="id">{{label}}</label>
-		<div :style="computedStyleBorder">
+		<div class="border" :style="computedStyleBorder">
 			<input v-on:keyup="$emit('keyup', $refs.inputElement.value)" ref="inputElement" :id="id" :placeholder="placeholder" :style="computedStyleInput" />
 		</div>
 	</div>
@@ -51,6 +51,10 @@ export default {
 .form-item {
 	display: block;
 	width: 100%;
+}
+
+.border {
+	overflow: hidden;
 }
 
 input {

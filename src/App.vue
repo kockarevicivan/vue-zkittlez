@@ -1,8 +1,10 @@
 <template>
 	<div id="app">
 		<ZHeader />
-		<ZCenter vertical horizontal>
+		<ZCenter horizontal>
 			<ZHalf>
+				<ZSpacer />
+
 				<ZCard>
 					<div>
 						<h1>Test form</h1>
@@ -27,6 +29,8 @@
 						<ZButton @click="buttonClick" text="Click me" />
 					</div>
 				</ZCard>
+
+				<ZSpacer />
 			</ZHalf>
 		</ZCenter>
 	</div>

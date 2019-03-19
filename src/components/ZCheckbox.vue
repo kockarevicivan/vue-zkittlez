@@ -4,7 +4,7 @@
 			<input type="checkbox" id="checkbox" style="display:none"/>
 			<label for="checkbox" class="toggle"><span></span></label>
 		</div>
-		<label v-if="label" class="actual-label" >{{label}}</label> 
+		<label for="checkbox" v-if="label" class="actual-label" >{{label}}</label> 
     </div>
 </template>
 

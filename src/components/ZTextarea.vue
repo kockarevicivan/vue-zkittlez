@@ -1,7 +1,7 @@
 <template>
 	<div class="form-item" :style="computedStyleItem">
 		<label :style="computedStyleLabel" :for="id">{{label}}</label>
-		<div :style="computedStyleBorder">
+		<div class="border" :style="computedStyleBorder">
 			<textarea v-on:keyup="$emit('keyup', $refs.textareaElement.value)" ref="textareaElement" :style="computedStyleTextarea" :id="id" :placeholder="placeholder"></textarea>
 		</div>
 	</div>
@@ -41,7 +41,6 @@ export default {
         computedStyleTextarea() {
 			return `
 				color: ${config.styles.color.text};
-				min-height: 100px;
 				max-height: 300px;
 				padding: ${config.styles.padding.small}px;
 				font-size: ${config.styles.font.size.input}px;
@@ -58,8 +57,13 @@ export default {
 	width: 100%;
 }
 
+.border {
+	overflow: hidden;
+}
+
 textarea {
 	width: 100%!important;
+	min-height: 100px;
 	border: none;
 	outline: none!important;
 }

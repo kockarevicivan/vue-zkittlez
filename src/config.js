@@ -1,8 +1,8 @@
 export const config = {
     styles: {
         borderRadius: {
-            small: 2,
-            big: 4
+            small: 4,
+            big: 6
         },
         padding: {
             small: 15,
@@ -12,7 +12,7 @@ export const config = {
             big: '0px 2px 10px 2px rgba(0,0,0,0.2)'
         },
         height: {
-            inputsAndButtons: 44
+            inputsAndButtons: 50
         },
         color: {
             primary: '#FEC83C',
