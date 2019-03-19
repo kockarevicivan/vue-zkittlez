@@ -12,6 +12,7 @@
 						<ZTextarea id="message" placeholder="Message" label="Message" />
 
 						<ZCheckbox />
+						<ZWorld />
 
 						<ZButton @click="buttonClick" text="Click me" />
 					</div>
@@ -29,6 +30,7 @@ import ZTextarea from './components/ZTextarea.vue';
 import ZButton from './components/ZButton.vue';
 import ZCard from './components/ZCard.vue';
 import ZCheckbox from './components/ZCheckbox.vue';
+import ZWorld from './components/illustrations/ZWorld.vue';
 
 export default {
 	name: 'app',
@@ -39,7 +41,8 @@ export default {
 		ZTextarea,
 		ZButton,
 		ZCard,
-		ZCheckbox
+		ZCheckbox,
+		ZWorld
 	},
 	methods: {
 		onFullName(value) {

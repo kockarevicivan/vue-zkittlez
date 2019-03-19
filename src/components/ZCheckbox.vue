@@ -1,7 +1,7 @@
 <template>
 	<div class="form-item">
         <input type="checkbox" id="checkbox" style="display:none"/>
-        <label :style="computedStyle" for="checkbox" class="toggle"><span></span></label>    
+        <label for="checkbox" class="toggle"><span></span></label>    
     </div>
 </template>
 
