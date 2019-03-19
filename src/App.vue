@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-		<ZCenter>
+		<ZCenter vertical horizontal>
 			<ZThird>
 				<ZCard>
 					<div>
@@ -12,7 +12,7 @@
 						<ZTextarea id="message" placeholder="Message" label="Message" />
 
 						<ZCheckbox />
-						<ZWorld />
+						<!-- <ZWorld /> -->
 
 						<ZButton @click="buttonClick" text="Click me" />
 					</div>
@@ -30,7 +30,7 @@ import ZTextarea from './components/ZTextarea.vue';
 import ZButton from './components/ZButton.vue';
 import ZCard from './components/ZCard.vue';
 import ZCheckbox from './components/ZCheckbox.vue';
-import ZWorld from './components/illustrations/ZWorld.vue';
+// import ZWorld from './components/illustrations/ZWorld.vue';
 
 export default {
 	name: 'app',
@@ -42,7 +42,7 @@ export default {
 		ZButton,
 		ZCard,
 		ZCheckbox,
-		ZWorld
+		// ZWorld
 	},
 	methods: {
 		onFullName(value) {
@@ -67,5 +67,9 @@ export default {
 
 h1 {
 	margin-bottom: 20px;
+}
+
+#app {
+	height: 1000px;
 }
 </style>
