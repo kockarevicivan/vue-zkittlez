@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="third">
         <slot></slot>
     </div>
 </template>
@@ -10,8 +10,8 @@ export default {
 }
 </script>
 
-<style scoped>
-div {
+<style>
+.third {
     display: inline-block;
     width: 33.333%;
 }

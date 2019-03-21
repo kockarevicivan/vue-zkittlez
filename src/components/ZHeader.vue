@@ -1,8 +1,8 @@
 <template>
-	<div>
+	<header>
         <img src="../assets/images/logo.png" />
         <a href="#">Welcome to Zkittlez!</a>
-    </div>
+    </header>
 </template>
 
 <script>
@@ -11,8 +11,8 @@ export default {
 }
 </script>
 
-<style scoped>
-div {
+<style>
+header {
     display: flex;
     height: 100px;
     background: #fcfcfc;
@@ -20,13 +20,13 @@ div {
     align-items: center;
 }
 
-img {
+header > img {
     display: inline-block;
     height: 20px;
     padding-left: 40px;
 }
 
-a {
+header > a {
     text-decoration: none;
     font-weight: 800;
     padding-left: 10px;
