@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="half">
         <slot></slot>
     </div>
 </template>
@@ -10,8 +10,8 @@ export default {
 }
 </script>
 
-<style scoped>
-div {
+<style>
+.half {
     display: inline-block;
     width: 50%;
 }

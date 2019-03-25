@@ -51,7 +51,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .form-item {
 	display: block;
 	width: 100%;
@@ -61,14 +61,14 @@ export default {
 	overflow: hidden;
 }
 
-textarea {
+.form-item > .border > textarea {
 	width: 100%!important;
 	min-height: 100px;
 	border: none;
 	outline: none!important;
 }
 
-label {
+.form-item > .border > label {
 	display: inline-block;
 	text-align: left;
 	margin: 0 0 5px 2px;
